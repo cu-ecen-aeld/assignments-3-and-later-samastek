@@ -10,6 +10,4 @@ fi
 
 parent_dir=$(dirname $writefile)
 
-mkdir -p $parent_dir 
-
 echo "$writestr" > "$writefile" 
