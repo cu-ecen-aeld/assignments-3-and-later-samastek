@@ -1,13 +1,15 @@
 CC := $(CROSS_COMPILE)gcc
 CFLAGS := -Wall -Werror -g
-TARGET := writer
+TARGET := writer finder
 
 .PHONY: all clean
 
 all: $(TARGET)
 
-$(TARGET): writer.c
-	$(CC) $(CFLAGS) -o $(TARGET) writer.c
+writer: writer.c
+	$(CC) $(CFLAGS) -o writer writer.c
 
+finder: finder.c
+	$(CC) $(CFLAGS) -o finder finder.c
 clean:
 	rm -f $(TARGET) *.o
